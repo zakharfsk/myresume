@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block generalpage %}
+<div class="background-photo-1">
+    <div class="text-1">
+        <p class="text-on-photo-1 text-center fs-3 mx-0">Про проект.</p>
+        <p class="text-on-photo-2 text-center fs-5 mx-0">Привіт. Я Захар, і я Junior Python Developer<br>Цей сайт
+            створений, як зразок, за допомогою фреймворка Django і це лише початок.<br>
+            <br>Мені 17 і я вже маю досвід стажувань в комерційних проектах.<br><br>
+            Вивчаю Python, Rust, Smart Contract, Blokchain, C/C++, Arduino.<br><br>
+            Версія Django: 4.0.0<br>Версія Python:
+            3.10.1<br><br><a class="btn btn-outline-light" href="{{ link_on_project }}" target="_blank">GitHub
+                Project</a>
+        </p>
+    </div>
+</div>
+<div class="background-photo-3">
+    <div class="text-1">
+        <p class="text-on-photo-1 text-right fs-3 mx-0">Освіта</p>
+        <p class="text-on-photo-2 text-right fs-5 mx-0 col-sm">
+            Навчальний заклад: Хмельницький обласний ліцей<br>
+        <ul class="fs-5 col-sm">
+            <li class="col-sm text-school">Напрям: Інформаційні технології</li>
+            <li class="col-sm text-school">Освіта: Середня</li>
+            <li class="col-sm text-school">Закінчив: 2021 року</li>
+        </ul>
+        </p>
+        <p class="text-on-photo-2 text-right fs-5 mx-0 col-sm">
+            Навчальний заклад: Хмельницький Національний Університет<br>
+        <ul class="fs-5 col-sm">
+            <li class="col-sm text-school">Напрям: Комп'ютерна інженерія</li>
+            <li class="col-sm text-school">Освіта: Бакалавр</li>
+            <li class="col-sm text-school">Закінчив: 2025 (Завершиться навчання)</li>
+        </ul>
+        </p>
+    </div>
+</div>
+</div>
+
+{% endblock generalpage %}

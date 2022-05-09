@@ -1,0 +1,142 @@
+.text-1 {
+	transition: 1s;
+	display: inline-block;
+}
+
+.text-school {
+	color: white;
+}
+
+.text-1:hover {
+	transform: scale(1.09);
+	transition: 1s;
+}
+
+.wrap-text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.text-on-photo-1{
+	color: white;
+	margin: 15px 10px;
+}
+
+.text-on-photo-2{
+	color: white;
+	margin: 15px 10px;
+}
+
+.background-photo-1 {
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-image: linear-gradient(
+		-90deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../images/wallpaper1.jpg);
+	min-height: 500px;
+	padding: 140px 150px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.background-photo-2 {
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-image: linear-gradient(
+		-90deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../images/wallpaper.jpg);
+	
+		padding: 225px 150px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.background-photo-3 {
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-image: linear-gradient(
+		-90deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../images/wallpaper2.jpg);
+	
+	padding: 45px 150px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.my-card {
+	margin: 0 auto;
+	width: 90%;
+	padding-top: 50px;
+	text-align: center;
+	max-width: 1000px;
+	min-height: 535px;
+}
+
+.my-card-w {
+	width: 250px;
+}
+
+.my-card-row {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.my-card-col {
+    margin-bottom: 50px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+body {
+    background-color: #eef3f4;
+}
+
+.height-100 {
+    height: 100vh
+}
+
+.card {
+    width: 380px;
+    border: none;
+    height: 280px
+}
+
+.ratings {
+    margin-right: 10px
+}
+
+.ratings i {
+    color: #cecece;
+    font-size: 32px
+}
+
+.rating-color {
+    color: #fbc634 !important
+}
+
+.review-count {
+    font-weight: 400;
+    margin-bottom: 2px;
+    font-size: 24px !important
+}
+
+.small-ratings i {
+    color: #cecece
+}
+
+.review-stat {
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 2px
+}

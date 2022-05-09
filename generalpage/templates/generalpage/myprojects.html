@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load generalpage_tags %}
+
+{% block myproject %}
+    {% getprojects as get_projects %}
+
+    <div class="my-card">
+        <div class="row my-card-row">
+            {% for project in get_projects %}
+                {% autoescape off %}
+                    <div class="col-sm-5 my-card-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ project.name_project }}</h5>
+                                <p class="card-text">{{ project.description_project }}</p>
+                                <a href="{{ project.link_on_github }}" class="btn btn-primary" target="_blank">Project
+                                    on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endautoescape %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock myproject %}

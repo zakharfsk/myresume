@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load generalpage_tags %}
+
+{% block jobs %}
+
+<div class="my-card">
+	{% getjobs as all_jobs%}
+	{% for j in all_jobs %}
+	<div class="card col-3 mx-auto mx-sm-2 my-sm-2 my-1 d-inline-block my-card-w">
+		<div class="card-body">
+			<h5 class="card-title">{{ j.title }}</h5>
+			<h6 class="card-subtitle mb-2 text-muted">{{ j.time_jobs }}</h6>
+			<h6 class="card-subtitle mb-2 text-muted">{{ j.name_company }}</h6>
+			<p class="card-text">{{ j.content | linebreaks | truncatewords:12}}</p>
+			<a href="{% url 'select_job' j.pk %}" class="card-link">Подробніше</a>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock jobs %}
