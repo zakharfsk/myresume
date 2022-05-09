@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'zaharfsk.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dcog4ushrou3i0',
+        'USER': 'wwmteujeqnlgdr',
+        'PASSWORD': 'bf965aa9f4f3831e5cf7ef4f02910d8918d422ab88bed90100be9715d3f6fc17',
+        'HOST': 'ec2-3-229-11-55.compute-1.amazonaws.com',
+        'PORT': 5432,
     }
 }
 
