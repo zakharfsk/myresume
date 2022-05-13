@@ -27,7 +27,7 @@ def general(request):
 
 def expirienceJobs(request):
 
-    context =  {
+    context = {
         'title': 'Досвід роботи',
         'networks': networks
      }
