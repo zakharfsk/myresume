@@ -22,9 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-project_folder = os.path.expanduser('~/zaharfsk')
-load_dotenv(os.path.join(project_folder, '.env'))
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-9+-pec9=ev0f@*s&a=+ba$21ac^ml^svj8@lchv@e_cea8w-q+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,10 +81,10 @@ WSGI_APPLICATION = 'zaharfsk.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('NAME_BD'),
-        'USER': os.getenv('USER_BD'),
-        'PASSWORD': os.getenv('PASSWORD_BD'),
-        'HOST': os.getenv('HOST_BD'),
+        'NAME': 'dcog4ushrou3i0',
+        'USER': 'wwmteujeqnlgdr',
+        'PASSWORD': 'bf965aa9f4f3831e5cf7ef4f02910d8918d422ab88bed90100be9715d3f6fc17',
+        'HOST': 'ec2-3-229-11-55.compute-1.amazonaws.com',
         'PORT': 5432,
     }
 }
