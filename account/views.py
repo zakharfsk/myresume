@@ -7,6 +7,9 @@ from .models import *
 
 
 def page_login(request):
+    context = {
+        'title': 'Увійти'
+    }
 
     if request.user.is_authenticated:
         return redirect('home')
@@ -21,11 +24,7 @@ def page_login(request):
                 login(request, user)
                 return redirect('home')
             else:
-                messages.info(request, 'Username OR password is incorrect')
-
-        context = {
-            'title': 'Увійти'
-        }
+                context['error'] = 'Невірний логін або пароль'
 
         return render(
             request,
@@ -43,11 +42,25 @@ def page_register(request):
             form = CreateUserForm(request.POST)
             if form.is_valid():
                 form.save()
-
-                user = form.cleaned_data.get('username')
-                messages.success(request, 'Аккаунт був створений для ' + user)
-
                 return redirect('login')
+            else:
+                err = form.errors.get_json_data()
+                array_errors = ''
+
+                for key, value in err.items():
+                    array_errors += value[0]['message'] + '<br>'
+
+                context = {
+                    'title': 'Зареєструватися',
+                    'form': form,
+                    'form_error': array_errors
+                }
+
+                return render(
+                    request,
+                    'register.html',
+                    context
+                )
 
         context = {
             'title': 'Зареєструватися',
