@@ -81,7 +81,7 @@ def profile(request, username):
 
     if request.method == "POST":
         
-        user_form = UserForm(request.POST, instance = request.user)
+        user_form = UserForm(request.POST, request.FILES, instance = request.user)
         
         if user_form.is_valid():
             user_form.save()
